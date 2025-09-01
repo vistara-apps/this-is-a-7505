@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: hsl(220 15% 95%);
+  --accent: hsl(160 70% 45%);
+  --primary: hsl(240 80% 50%);
+  --surface: hsl(0 0% 100%);
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --shadow-card: 0 8px 24px hsla(220 15% 12%, 0.12);
+  --spacing-lg: 20px;
+  --spacing-md: 12px;
+  --spacing-sm: 8px;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-bg text-gray-900 font-normal leading-7;
+  }
+  
+  h1 {
+    @apply text-display;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface rounded-lg shadow-card p-6;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-md font-medium transition-all duration-base ease-custom hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-white px-6 py-3 rounded-md font-medium transition-all duration-base ease-custom hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+}
