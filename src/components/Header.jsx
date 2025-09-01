@@ -1,23 +1,25 @@
-import React from 'react'
-import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { Dna } from 'lucide-react'
+import React from 'react';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { Dna } from 'lucide-react';
 
-export default function Header() {
+export function Header() {
   return (
-    <header className="bg-surface shadow-sm border-b border-gray-100">
-      <div className="container mx-auto max-w-4xl px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <Dna className="h-8 w-8 text-accent" />
-            <div>
-              <h1 className="text-xl font-bold text-gray-900">GeneGlow</h1>
-              <p className="text-sm text-gray-600">Unlock Your DNA's Fun Secrets</p>
-            </div>
+    <header className="border-b border-gray-800 bg-dark-surface/50 backdrop-blur-sm">
+      <div className="container flex items-center justify-between py-4">
+        <div className="flex items-center space-x-3">
+          <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
+            <Dna className="w-6 h-6 text-white" />
           </div>
-          
-          <ConnectButton />
+          <div>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              GeneGlow
+            </h1>
+            <p className="text-xs text-gray-400">DNA Traits Predictor</p>
+          </div>
         </div>
+        
+        <ConnectButton />
       </div>
     </header>
-  )
+  );
 }

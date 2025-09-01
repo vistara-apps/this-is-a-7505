@@ -1,38 +1,57 @@
-import React from 'react'
-import { Sparkles, Upload, Zap } from 'lucide-react'
+import React from 'react';
+import { Sparkles, Zap, Shield } from 'lucide-react';
 
-export default function Hero() {
+export function Hero() {
   return (
-    <section className="text-center space-y-8">
-      <div className="space-y-4">
-        <h1 className="text-display text-gray-900">
-          Discover What Your <span className="text-accent">DNA</span> Says About You
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Upload your FASTA genetic sequence and get fun, AI-powered predictions about your unique traits. 
-          From baldness to belly fat tendencies - unlock your genetic secrets!
-        </p>
+    <div className="text-center py-12">
+      <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 rounded-full border border-purple-500/30 mb-8">
+        <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
+        <span className="text-sm text-purple-300">AI-Powered DNA Analysis</span>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-        <div className="card text-center space-y-3">
-          <Upload className="h-8 w-8 text-primary mx-auto" />
-          <h3 className="font-semibold text-gray-900">Upload FASTA</h3>
-          <p className="text-sm text-gray-600">Simply upload your genetic sequence file</p>
+      <h1 className="text-5xl font-bold mb-6">
+        Unlock Your DNA's{' '}
+        <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          Fun Secrets
+        </span>
+      </h1>
+      
+      <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+        Upload your FASTA genetic sequence and discover entertaining insights about your traits. 
+        From baldness predisposition to belly fat tendencies - let AI decode your DNA story.
+      </p>
+      
+      <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="card p-6 text-center">
+          <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <Zap className="w-6 h-6 text-purple-400" />
+          </div>
+          <h3 className="font-semibold mb-2">Easy Upload</h3>
+          <p className="text-gray-400 text-sm">
+            Simply drag and drop your FASTA file for instant analysis
+          </p>
         </div>
         
-        <div className="card text-center space-y-3">
-          <Zap className="h-8 w-8 text-primary mx-auto" />
-          <h3 className="font-semibold text-gray-900">AI Analysis</h3>
-          <p className="text-sm text-gray-600">Our AI scans for genetic markers and patterns</p>
+        <div className="card p-6 text-center">
+          <div className="w-12 h-12 bg-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <Sparkles className="w-6 h-6 text-pink-400" />
+          </div>
+          <h3 className="font-semibold mb-2">AI Predictions</h3>
+          <p className="text-gray-400 text-sm">
+            Advanced AI interprets your genetic markers for fun insights
+          </p>
         </div>
         
-        <div className="card text-center space-y-3">
-          <Sparkles className="h-8 w-8 text-primary mx-auto" />
-          <h3 className="font-semibold text-gray-900">Fun Predictions</h3>
-          <p className="text-sm text-gray-600">Get entertaining insights about your traits</p>
+        <div className="card p-6 text-center">
+          <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <Shield className="w-6 h-6 text-green-400" />
+          </div>
+          <h3 className="font-semibold mb-2">Secure</h3>
+          <p className="text-gray-400 text-sm">
+            Your genetic data is processed securely and never stored
+          </p>
         </div>
       </div>
-    </section>
-  )
+    </div>
+  );
 }
